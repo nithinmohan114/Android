@@ -32,29 +32,6 @@ public class FirstActivity extends AppCompatActivity {
         tvMessage = findViewById(R.id.welcome);
         editText = findViewById(R.id.edittext);
 
-//        @Override
-//        protected void onResume(){
-//            super.onResume();
-//            new AsyncTask<Void void, Void>(){
-//
-//                @Override
-//                protected Void doInBackground(Void... params){
-//                    try{
-//                        Thread.sleep(5000);
-//                    }catch (InterruptedException e){
-//                        e.printStackTrace();
-//                    }
-//                    return null;
-//                }
-//
-//                @Override
-//                protected void onPostExecute(Void aVoid){
-//                    (EditText)findViewById(R.id.edittext).setText(R.string.app_name);
-//                }
-//
-//            },execute();
-//        }
-
         idlingResource.increment();
         new Thread(new Runnable() {
             @Override
@@ -76,7 +53,6 @@ public class FirstActivity extends AppCompatActivity {
         }).start();
 
 
-
         btnWelcome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,8 +60,6 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 
     public CountingIdlingResource getIdlingResource() {

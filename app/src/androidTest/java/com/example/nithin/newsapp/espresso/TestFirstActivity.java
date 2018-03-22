@@ -45,12 +45,10 @@ public class TestFirstActivity {
             onView(withId(R.id.edittext)).check(matches(withText("Hello")));
             onView(withId(R.id.button)).perform(click());
             Espresso.registerIdlingResources(ActivityRule.getActivity().getIdlingResource());
-//            Thread.sleep(10000);
             onView(withId(R.id.rv)).check(matches(isDisplayed()));
             onView(withId(R.id.title)).check(matches(withText("Body cam footage shows Ohio police officers saving choking baby")));
             onView(withId(R.id.description)).check(matches(isDisplayed()));
             onView(withText(R.id.description)).check(matches(withText("Body cam footage shows two police officers in Shaker heights, Ohio, rescuing a choking baby, as the mother's vehicle was stopped in the middle of the traffic")));
-
 
         }
         catch (Exception e){
