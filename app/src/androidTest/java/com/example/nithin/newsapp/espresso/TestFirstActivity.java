@@ -59,7 +59,7 @@ public class TestFirstActivity {
             onView(withId(R.id.edittext)).check(matches(withText("Hello")));
             onView(withId(R.id.button)).perform(click());
             EspressoIdlingResources.increment();
-            Espresso.registerIdlingResources(ActivityRule.getActivity().getIdlingResource());
+//            Espresso.registerIdlingResources(ActivityRule.getActivity().getIdlingResource());
             onView(withId(R.id.rv)).check(matches(isDisplayed()));
             EspressoIdlingResources.decrement();
             onView(withId(R.id.title)).check(matches(withText("Body cam footage shows Ohio police officers saving choking baby")));
